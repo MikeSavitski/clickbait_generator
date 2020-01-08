@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClickbaitGenerator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClickbaitGenerator_jar</output-path>
+    <root id="archive" name="ClickbaitGenerator.jar">
+      <element id="module-output" name="ClickbaitGenerator" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/flickr4java/flickr4java/3.0.2/flickr4java-3.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/scribejava/scribejava-apis/6.2.0/scribejava-apis-6.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/scribejava/scribejava-core/6.2.0/scribejava-core-6.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
