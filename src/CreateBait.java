@@ -18,6 +18,14 @@ public class CreateBait {
 
     public void create() {
 
+        int minWidth = 1000;
+        if ( image.getWidth() < minWidth ) {
+            int scale = minWidth / image.getWidth();
+            int scaledHeight = image.getHeight() * scale;
+            image = scale( image, minWidth, scaledHeight );
+            System.out.println( "Tried scaling." );
+        }
+
         Graphics graphic = image.getGraphics();
 
         int y = ( image.getHeight() / 10 ) * 8;
@@ -35,6 +43,26 @@ public class CreateBait {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private BufferedImage scale( BufferedImage src, int w, int h )
+    {
+        BufferedImage img =
+                new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
+        int x, y;
+        int ww = src.getWidth();
+        int hh = src.getHeight();
+        int[] ys = new int[h];
+        for (y = 0; y < h; y++)
+            ys[y] = y * hh / h;
+        for (x = 0; x < w; x++) {
+            int newX = x * ww / w;
+            for (y = 0; y < h; y++) {
+                int col = src.getRGB(newX, ys[y]);
+                img.setRGB(x, y, col);
+            }
+        }
+        return img;
     }
 
 }

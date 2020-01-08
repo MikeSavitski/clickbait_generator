@@ -50,6 +50,7 @@ public class ImageRetriever {
         if (list != null && list.size() > 0) {
 
             Random random = new Random();
+            random.setSeed( System.currentTimeMillis() );
             int random_int = random.nextInt( list.size() );
 
             String urlString = null;

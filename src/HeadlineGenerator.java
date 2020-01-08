@@ -24,7 +24,7 @@ public class HeadlineGenerator {
                 headline = "Problems with " + inspiration + "? Click here!";
                 break;
             case 1:
-                headline = (rnd - 1) + "/" + rnd + " doctors reccomend this" + inspiration + "!";
+                headline = (rnd - 1) + "/" + rnd + " doctors reccomend this " + inspiration + "!";
                 break;
             case 2:
                 headline = inspiration + "? See what experts think!";
