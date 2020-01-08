@@ -7,7 +7,9 @@ public class main {
 
     public static void main( String args[] ) {
 
-        String searchString = "panda pineapple";
+        String searchString = "potato panda";
+        String headlineInspiration = "Sauce";
+
         ImageRetriever imageRetriever = new ImageRetriever( searchString );
         BufferedImage image = imageRetriever.getImage();
 
@@ -17,6 +19,11 @@ public class main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        HeadlineGenerator headlineGenerator = new HeadlineGenerator( headlineInspiration );
+        String headline = headlineGenerator.getHeadline();
+
+        System.out.println(headline);
 
     }
 
