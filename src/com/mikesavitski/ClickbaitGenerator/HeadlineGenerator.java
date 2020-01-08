@@ -1,3 +1,5 @@
+package com.mikesavitski.ClickbaitGenerator;
+
 import java.util.Random;
 
 public class HeadlineGenerator {
