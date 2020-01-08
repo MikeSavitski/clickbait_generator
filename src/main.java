@@ -7,8 +7,8 @@ public class main {
 
     public static void main( String args[] ) {
 
-        String searchString = "potato panda";
-        String headlineInspiration = "Sauce";
+        String searchString = "improv happiness";
+        String headlineInspiration = "Improv";
 
         ImageRetriever imageRetriever = new ImageRetriever( searchString );
         BufferedImage image = imageRetriever.getImage();
@@ -23,7 +23,8 @@ public class main {
         HeadlineGenerator headlineGenerator = new HeadlineGenerator( headlineInspiration );
         String headline = headlineGenerator.getHeadline();
 
-        System.out.println(headline);
+        CreateBait createBait = new CreateBait( image, headline );
+        createBait.create();
 
     }
 

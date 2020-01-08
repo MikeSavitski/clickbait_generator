@@ -15,6 +15,7 @@ public class HeadlineGenerator {
         String headline = "";
 
         Random random = new Random();
+        random.setSeed(System.currentTimeMillis());
         int random_int = random.nextInt(10);
         int rnd = random.nextInt(21);
 
@@ -32,13 +33,13 @@ public class HeadlineGenerator {
                 headline = "Celebrities' top " + rnd + " tips for great " + inspiration + "!";
                 break;
             case 4:
-                headline = rnd + " things about " + inspiration + "the government doesn't want you to know!";
+                headline = rnd + " things about " + inspiration + " the government doesn't want you to know!";
                 break;
             case 5:
                 headline = "Got " + inspiration + "? Find out why you might be in trouble!";
                 break;
             case 6:
-                headline = "Missing " + inspiration + "found after " + rnd + " years!";
+                headline = "Missing " + inspiration + " found after " + rnd + " years!";
                 break;
             case 7:
                 headline = "Ever wonder about " + inspiration + "? Click for answers!";
